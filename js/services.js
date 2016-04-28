@@ -1,7 +1,6 @@
 var appServices = angular.module('appServices',[]);
 
 appServices.factory('apiServices', function($http){
-//	var driverApiServices = {};
 	this.nameFilter = null;
 	this.getDrivers = function(){
 		return $http({

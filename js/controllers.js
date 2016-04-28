@@ -34,3 +34,10 @@ appControllers.controller('driverController',function($scope,apiServices){
     });
     
 });
+
+appControllers.controller('todoController',function($scope){
+    $scope.todoInputVal = null;
+    $scope.todoClicked = function(){
+        $scope.todoValue = $scope.todoInputVal;
+    };
+});
