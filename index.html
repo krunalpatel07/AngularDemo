@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	
+		<link rel="stylesheet" href="css/materialize.css"/>
 		<script src="bower_components/angular/angular.js" type="text/javascript"></script>
 	</head>
 	<body ng-app="myApp" ng-controller="driverController">
+		<input type="text" ng-model="nameFilter" placeholder="search"/>
 		<table>
 			<thead>
 				<tr>
@@ -11,9 +14,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				
+				<tr ng-repeat="driver in driverList | filter : nameFilter">
+					<td>{{$index+1}}</td>
+					<td>{{driver.nationality}}</td>
+					<td>{{driver.Driver.familyName}}</td>
+					<td>{{driver.Constructors[0].name}}</td>
+					<td>{{driver.points}}</td>
+				</tr>
 			</tbody>
 		</table>
 		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/services.js"></script>
 	</body>
 </html>
