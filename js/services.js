@@ -6,7 +6,7 @@ appServices.factory('apiServices', function($http){
 	this.getDrivers = function(){
 		return $http({
 			method:'JSONP',
-			url:'http://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK'
+			url:'http://ergast.com/api/f1/2015/driverStandings.json?callback=JSON_CALLBACK'
 		});
 	};
 	return this;
