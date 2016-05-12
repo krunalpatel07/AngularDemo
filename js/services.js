@@ -10,3 +10,13 @@ appServices.factory('apiServices', function($http){
 	};
 	return this;
 });
+
+appServices.factory('formSubmitServices', function($http){
+	this.submitForm = function(){
+		return $http({
+			method:'POST',
+			url:'action_page.php'
+		});
+	};
+	return this;
+});

@@ -1,0 +1,9 @@
+<div class="row" ng-controller="postController">
+    <form name="userForm" ng-submit="userFormSubmit()">
+        <div class="col-lg-6">
+            <input ng-model="user.name" name="username" type="text" placeholder="Username"/>
+            <input ng-model="user.email" type="email" name="useremail" placeholder="email"/>
+            <button class="btn" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
