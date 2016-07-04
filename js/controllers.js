@@ -41,3 +41,12 @@ appControllers.controller('todoController',function($scope){
         $scope.todoValue = $scope.todoInputVal;
     };
 });
+
+appControllers.controller('postController', function($scope,formSubmitServices){
+    $scope.user = {};
+    $scope.userFormSubmit = function(){
+        formSubmitServices.submitForm().success(function(data){
+           console.log(data);
+        });
+    }
+});
